@@ -1,0 +1,16 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: compile
+      run: cc -g foo.c -o foo
+    - name: run-app
+      run: ./foo

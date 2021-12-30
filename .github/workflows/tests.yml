@@ -10,6 +10,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+    - name: verify
+      run: pwd
     - name: compile
       run: cc -g foo.c -o foo
     - name: run-app
